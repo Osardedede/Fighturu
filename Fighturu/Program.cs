@@ -79,6 +79,8 @@ while (wep != "katana" && wep != "flamethrower" && wep != "plastic suit")
         {
             BH -= 200;
             Console.WriteLine("OH shit seems he was extra week to that weapon!");
+            Console.WriteLine($"Nice now he only has {BH} HP left!");
+
         }
     }
     if (wep == "flamethrower")
@@ -88,6 +90,8 @@ while (wep != "katana" && wep != "flamethrower" && wep != "plastic suit")
         {
             BH -= 400;
             Console.WriteLine("OH shit seems he was extra week to that weapon!");
+            Console.WriteLine($"Nice now he only has {BH} HP left!");
+
         }
     }
     if (wep == "plastic suit")
@@ -96,8 +100,7 @@ while (wep != "katana" && wep != "flamethrower" && wep != "plastic suit")
     }
 }
 
-Console.WriteLine($"Nice now he only has {BH} HP left!");
-Console.WriteLine($"Whatch out here come his atack");
+Console.WriteLine($"Whatch out here is his atack");
 if (wep == "plastic suit" && boss == "Pikachu")
 {
     Console.WriteLine($"Nice {boss} didn't do any damage. He will proberly start doing physikac attacks doe");
@@ -106,6 +109,7 @@ if (wep == "plastic suit" && boss == "Pikachu")
 else
 {
     int damage2 = generator.Next(100, 200);
+    PH -= damage2;
     Console.WriteLine($"Outch he did some damage. You still have {PH} HP left");
 }
 
