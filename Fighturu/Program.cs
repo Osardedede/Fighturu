@@ -11,7 +11,6 @@ bossNames.Add("Pikachu");
 
 int num = generator.Next(bossNames.Count);
 
-Console.WriteLine(bossNames[num]);
 
 string boss = bossNames[num];
 int BH = 0;
@@ -108,11 +107,11 @@ while (BH != 0 && PH != 0)
         }
     }
 
+
     Console.WriteLine($"Whatch out here is his atack");
     if (wep == "plastic suit" && boss == "Pikachu")
     {
         Console.WriteLine($"Nice {boss} didn't do any damage. He will proberly start doing physical attacks doe");
-        Console.ReadLine();
     }
     else
     {
@@ -144,7 +143,7 @@ while (BH != 0 && PH != 0)
     PH -= superdamage;
     Console.WriteLine($"BOOM");
     Thread.Sleep(1500);
-    if (PH == 0)
+    if (PH < 1)
     {
         Console.WriteLine($"YOU DIED. He did {superdamage} damage");
     }
@@ -155,16 +154,18 @@ while (BH != 0 && PH != 0)
     }
     Console.WriteLine($"Now Its time to do your SUPER!");
     Console.WriteLine("What element are your super?");
-    Console.WriteLine("Fire, dark or ");
+    Console.WriteLine("Fire, dark or water");
     super = Console.ReadLine();
-    
 
+    Console.WriteLine("Good choise!");
+    Thread.Sleep(1000);
+    int superdamage2 = generator.Next(1000, 2000);
+    BH -= superdamage2;
 
-
-
-
-
-
+    Console.WriteLine("And the amount of HP he has is?????!!");
+    Thread.Sleep(1000);
+    Console.WriteLine($"0! Good job.");
+    Console.WriteLine("YOU WIN");
     Console.ReadLine();
 
 }
