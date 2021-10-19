@@ -44,8 +44,9 @@ if (boss == "Peter")
     stuff.PB();
     BH = 1000;
 }
-while (BH != 0 && PH != 0)
+while (BH > 0 && PH > 0)
 {
+  
 
 
     Console.WriteLine($"What will {name} do? I think he has like {BH} HP! You have only {PH} HP!");
@@ -161,14 +162,14 @@ while (BH != 0 && PH != 0)
     Thread.Sleep(1000);
     int superdamage2 = generator.Next(1000, 2000);
     BH -= superdamage2;
+   
+}
 
-    Console.WriteLine("And the amount of HP he has is?????!!");
+   Console.WriteLine("And the amount of HP he has is?????!!");
     Thread.Sleep(1000);
     Console.WriteLine($"0! Good job.");
     Console.WriteLine("YOU WIN");
     Console.ReadLine();
-
-}
 
 
 
